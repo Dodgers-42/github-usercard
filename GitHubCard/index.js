@@ -59,46 +59,60 @@ const followersArray = [];
     </div>
 */
 
-// function dodgersInfo (card, img, card-info, name, username, user location, Profile, Fallowers, Fallowing, Bio ) {
+function dodgersInfo (card, imageUrlOfUser, cardInfo, name, usersName, location, profile, followers, following, bio) {
 
 // creating const
-// const card = document.createElement('div');
-// const cardImageUrlOfUser = document.createElement('img');
-// const cardCard-info = document.createElement('div');
-// const cardName = document.createElement('h3');
-// const cardUsersName = document.createElement('p');
-// const cardLocation = document.createElement('p');
-// const cardProfile = document.createElement('p');
-// const cardFollowers = document.createElement('p');
-// const cardFollowing = document.createElement('p');
-// const cardBio = document.createElement('p');
+const card = document.createElement('div');
+const cardImageUrlOfUser = document.createElement('img');
+const cardCardInfo = document.createElement('div');
+const cardName = document.createElement('h3');
+const cardUsersName = document.createElement('p');
+const cardLocation = document.createElement('p');
+const cardProfile = document.createElement('p');
+const cardFollowers = document.createElement('p');
+const cardFollowing = document.createElement('p');
+const cardBio = document.createElement('p');
 
 // update content
-// imageUrlOfUser.textContent = img;
-// card-info.textContent = title;
-// name.textContent = fullName;
-// usersName.textContent = firstParagraph;
-// location.textContent = secondParagraph;
-// profile.textContent = thirdParagraph;
-// followers.textContent = forthParagraph;
-// fallowing.textContent = fifthParagraph;
-// bio.textContent = sixthParagraph;
+imageUrlOfUser.textContent = img;
+cardInfo.textContent = title;
+name.textContent = fullName;
+usersName.textContent = firstParagraph;
+location.textContent = secondParagraph;
+profile.textContent = thirdParagraph;
+followers.textContent = forthParagraph;
+fallowing.textContent = fifthParagraph;
+bio.textContent = sixthParagraph;
 
 // appending
-// article.appendChild(articleTitle);
-// article.appendChild(articleDate);
-// article.appendChild(articleFirstParagraph);
-// article.appendChild(articleSecondParagraph);
-// article.appendChild(articleThirdParagraph);
-// // article.appendChild(article);
-// article.appendChild(expandButton);
-// article.appendChild(articleOpen);
+card.appendChild(cardImg);
+card.appendChild(cardTitle);
+card.appendChild(cardFirstParagraph);
+card.appendChild(cardSecondParagraph);
+card.appendChild(cardThirdParagraph);
+card.appendChild(cardForthParagraph);
+card.appendChild(cardFifthParagraph);
+card.appendChild(cardSixthParagraph);
 
-// }
+// styling
+card.classList.add('article');
+carfdTitle.classList.add('cardTitle');
+cardImg.classList.add('cardImg');
+cardFirstParagraph.classList.add('cardFirstParagraph');
+cardSecondParagraph.classList.add('cardSecondParagraph');
+cardThirdParagraph.classList.add('cardThirdParagraph');
+cardThirdParagraph.classList.add('cardForthParagraph');
+cardThirdParagraph.classList.add('cardFifthParagraph');
+cardThirdParagraph.classList.add('cardSixthParagraph');
+
+
+return DodgersInfo;
+
+};
 
 
 
-// return DodgersInfo
+
 /*
   List of LS Instructors Github username's:
     tetondan
