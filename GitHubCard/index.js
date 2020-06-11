@@ -17,7 +17,9 @@ let info = {};
 console.log(axios);
 axios.get('https://api.github.com/users/Dodgers-42').then((res) => {
 info = res.data
-console.log(info);})
+console.log(info);
+dodgersInfo(info)})
+
 .catch((err) => console.log(err.response))
 
 
@@ -59,7 +61,7 @@ const followersArray = [];
     </div>
 */
 
-function dodgersInfo (card, imageUrlOfUser, cardInfo, name, usersName, location, profile, followers, following, bio) {
+function dodgersInfo (obj) {
 
 // creating const
 const card = document.createElement('div');
@@ -74,39 +76,28 @@ const cardFollowing = document.createElement('p');
 const cardBio = document.createElement('p');
 
 // update content
-imageUrlOfUser.textContent = img;
-cardInfo.textContent = title;
-name.textContent = fullName;
-usersName.textContent = firstParagraph;
-location.textContent = secondParagraph;
-profile.textContent = thirdParagraph;
-followers.textContent = forthParagraph;
-fallowing.textContent = fifthParagraph;
-bio.textContent = sixthParagraph;
+
+  cardName.textContent = obj.login;
+  cardImageUrlOfUser.src = obj.avatar_url;
 
 // appending
-card.appendChild(cardImg);
-card.appendChild(cardTitle);
-card.appendChild(cardFirstParagraph);
-card.appendChild(cardSecondParagraph);
-card.appendChild(cardThirdParagraph);
-card.appendChild(cardForthParagraph);
-card.appendChild(cardFifthParagraph);
-card.appendChild(cardSixthParagraph);
+
+card.appendChild(cardName);
+card.appendChild(cardImageUrlOfUser);
 
 // styling
-card.classList.add('article');
-carfdTitle.classList.add('cardTitle');
-cardImg.classList.add('cardImg');
-cardFirstParagraph.classList.add('cardFirstParagraph');
-cardSecondParagraph.classList.add('cardSecondParagraph');
-cardThirdParagraph.classList.add('cardThirdParagraph');
-cardThirdParagraph.classList.add('cardForthParagraph');
-cardThirdParagraph.classList.add('cardFifthParagraph');
-cardThirdParagraph.classList.add('cardSixthParagraph');
+card.classList.add('card');
+// carfdTitle.classList.add('cardTitle');
+// cardImg.classList.add('cardImg');
+// cardFirstParagraph.classList.add('cardFirstParagraph');
+// cardSecondParagraph.classList.add('cardSecondParagraph');
+// cardThirdParagraph.classList.add('cardThirdParagraph');
+// cardThirdParagraph.classList.add('cardForthParagraph');
+// cardThirdParagraph.classList.add('cardFifthParagraph');
+// cardThirdParagraph.classList.add('cardSixthParagraph');
 
-
-return DodgersInfo;
+console.log(card);
+return card;
 
 };
 
