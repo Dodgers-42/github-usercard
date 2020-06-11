@@ -59,7 +59,17 @@ const followersArray = [];
     </div>
 */
 
-// function DodgersInfo (card, img, card-info, name, username, user location, Profile, Fallowers, Fallowing, Bio ) {
+// function dodgersInfo (card, img, card-info, name, username, user location, Profile, Fallowers, Fallowing, Bio ) {
+
+// creating const
+// const dodgerInfo = document.createElement('div');
+// const dodgerTitle = document.createElement('h2');
+// const DodgerDate = document.createElement('p');
+// const articleFirstParagraph = document.createElement('p');
+// const articleSecondParagraph = document.createElement('p');
+// const articleThirdParagraph = document.createElement('p');
+// const expandButton = document.createElement('span');
+// const articleOpen = document.createElement('div');
 
 // }
 
