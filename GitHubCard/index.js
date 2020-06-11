@@ -11,6 +11,15 @@
 
     Skip to STEP 3.
 */
+// const axios = require('axios');
+let info = {};
+
+console.log(axios);
+axios.get('https://api.github.com/users/Dodgers-42').then((res) => {
+info = res.data
+console.log(info);})
+.catch((err) => console.log(err.response))
+
 
 /*
   STEP 4: Pass the data received from Github into your function,
@@ -50,6 +59,13 @@ const followersArray = [];
     </div>
 */
 
+// function DodgersInfo (card, img, card-info, name, username, user location, Profile, Fallowers, Fallowing, Bio ) {
+
+// }
+
+
+
+// return DodgersInfo
 /*
   List of LS Instructors Github username's:
     tetondan
