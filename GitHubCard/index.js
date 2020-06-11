@@ -62,14 +62,37 @@ const followersArray = [];
 // function dodgersInfo (card, img, card-info, name, username, user location, Profile, Fallowers, Fallowing, Bio ) {
 
 // creating const
-// const dodgerInfo = document.createElement('div');
-// const dodgerTitle = document.createElement('h2');
-// const DodgerDate = document.createElement('p');
-// const articleFirstParagraph = document.createElement('p');
-// const articleSecondParagraph = document.createElement('p');
-// const articleThirdParagraph = document.createElement('p');
-// const expandButton = document.createElement('span');
-// const articleOpen = document.createElement('div');
+// const card = document.createElement('div');
+// const cardImageUrlOfUser = document.createElement('img');
+// const cardCard-info = document.createElement('div');
+// const cardName = document.createElement('h3');
+// const cardUsersName = document.createElement('p');
+// const cardLocation = document.createElement('p');
+// const cardProfile = document.createElement('p');
+// const cardFollowers = document.createElement('p');
+// const cardFollowing = document.createElement('p');
+// const cardBio = document.createElement('p');
+
+// update content
+// imageUrlOfUser.textContent = img;
+// card-info.textContent = title;
+// name.textContent = fullName;
+// usersName.textContent = firstParagraph;
+// location.textContent = secondParagraph;
+// profile.textContent = thirdParagraph;
+// followers.textContent = forthParagraph;
+// fallowing.textContent = fifthParagraph;
+// bio.textContent = sixthParagraph;
+
+// appending
+// article.appendChild(articleTitle);
+// article.appendChild(articleDate);
+// article.appendChild(articleFirstParagraph);
+// article.appendChild(articleSecondParagraph);
+// article.appendChild(articleThirdParagraph);
+// // article.appendChild(article);
+// article.appendChild(expandButton);
+// article.appendChild(articleOpen);
 
 // }
 
