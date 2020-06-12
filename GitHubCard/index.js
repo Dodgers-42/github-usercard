@@ -64,29 +64,43 @@ const followersArray = [];
 function dodgersInfo (obj) {
 
 // creating const
-const card = document.createElement('div');
-const cardImageUrlOfUser = document.createElement('img');
-const cardCardInfo = document.createElement('div');
-const cardName = document.createElement('h3');
-const cardUsersName = document.createElement('p');
-const cardLocation = document.createElement('p');
-const cardProfile = document.createElement('p');
-const cardFollowers = document.createElement('p');
-const cardFollowing = document.createElement('p');
-const cardBio = document.createElement('p');
+  const card = document.createElement('div');
+  const cardImageUrlOfUser = document.createElement('img');
+  const cardCardInfo = document.createElement('div');
+  const cardName = document.createElement('h3');
+  const cardUsersName = document.createElement('p');
+  const cardLocation = document.createElement('p');
+  const cardProfile = document.createElement('p');
+  const cardFollowers = document.createElement('p');
+  const cardFollowing = document.createElement('p');
+  const cardBio = document.createElement('p');
 
 // update content
 
   cardName.textContent = obj.login;
   cardImageUrlOfUser.src = obj.avatar_url;
+  // cardCardInfo.textContent = obj.
+  // cardUsersName.textContent = obj.
+  // cardLocation.textContent = obj. 
+  // cardProfile.textComntent = obj.
+  // cardFollowers.textContent = obj.
+  // cardFollowing.textContent = obj.
+  // cardbio.textContent = obj.
 
 // appending
 
-card.appendChild(cardName);
-card.appendChild(cardImageUrlOfUser);
+  card.appendChild(cardName);
+  card.appendChild(cardImageUrlOfUser);
+  // card.appendChild(cardCardInfo);
+  // card.appendChild(cardUsersName);
+  // card.appendChild(cardLocation);
+  // card.appendChild(cardProfile);
+  // card.appendChild(cardFollowers);
+  // card.appendChild(cardFollowing);
+  // card.appendChild(cardBio);
 
 // styling
-card.classList.add('card');
+  card.classList.add('card');
 // carfdTitle.classList.add('cardTitle');
 // cardImg.classList.add('cardImg');
 // cardFirstParagraph.classList.add('cardFirstParagraph');
