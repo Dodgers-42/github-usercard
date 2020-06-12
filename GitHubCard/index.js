@@ -15,12 +15,15 @@
 let info = {};
 
 console.log(axios);
-axios.get('https://api.github.com/users/Dodgers-42').then((res) => {
-info = res.data
-console.log(info);
-dodgersInfo(info)})
-
-.catch((err) => console.log(err.response))
+axios.get('https://api.github.com/users/Dodgers-42')
+.then((res) => {
+  info = res.data
+  console.log(info);
+//dodgersInfo(info)
+  let parent = document.querySelector('.cards');
+  parent.appendChild(dodgersInfo(info)); 
+  //parent.appendChild(dodgersInfo(res.data))
+}).catch((err) => console.log("wrong"))
 
 
 /*
@@ -64,9 +67,9 @@ const followersArray = [];
 function dodgersInfo (obj) {
 
 // creating const
+  const post = document.createElement('div');
+  const postImageUrlOfUser = document.createElement('img');
   const card = document.createElement('div');
-  const cardImageUrlOfUser = document.createElement('img');
-  const cardCardInfo = document.createElement('div');
   const cardName = document.createElement('h3');
   const cardUsersName = document.createElement('p');
   const cardLocation = document.createElement('p');
@@ -74,33 +77,40 @@ function dodgersInfo (obj) {
   const cardFollowers = document.createElement('p');
   const cardFollowing = document.createElement('p');
   const cardBio = document.createElement('p');
+  const cardATag = document.createElement('a');
 
 // update content
 
   cardName.textContent = obj.login;
-  cardImageUrlOfUser.src = obj.avatar_url;
-  // cardCardInfo.textContent = obj.
-  // cardUsersName.textContent = obj.
-  // cardLocation.textContent = obj. 
-  // cardProfile.textComntent = obj.
-  // cardFollowers.textContent = obj.
-  // cardFollowing.textContent = obj.
-  // cardbio.textContent = obj.
+  postImageUrlOfUser.src = obj.avatar_url;
+  cardUsersName.textContent = obj.name
+  cardLocation.textContent = obj.lacation
+  cardFollowers.textContent = obj.followers
+  cardFollowing.textContent = obj.following
+  cardbio.textContent = obj.bio
+  cardATag.textContent= obj.html_url
+  cardATag.href=obj.html_url
 
 // appending
 
   card.appendChild(cardName);
-  card.appendChild(cardImageUrlOfUser);
-  // card.appendChild(cardCardInfo);
-  // card.appendChild(cardUsersName);
-  // card.appendChild(cardLocation);
-  // card.appendChild(cardProfile);
-  // card.appendChild(cardFollowers);
-  // card.appendChild(cardFollowing);
-  // card.appendChild(cardBio);
-
+  post.appendChild(cardImageUrlOfUser);
+  card.appendChild(cardUsersName);
+  card.appendChild(cardLocation);
+  card.appendChild(cardProfile);
+  cardProfile.appendChild(cardATag);
+  card.appendChild(cardFollowers);
+  card.appendChild(cardFollowing);
+  card.appendChild(cardBio);
+  post.appendChild(card);
+  
 // styling
-  card.classList.add('card');
+  post.classList.add('card');
+  card.classList.add('card-info');
+  cardName.classList.add('name');
+  cardUsersName.classList.add('username');
+
+
 // carfdTitle.classList.add('cardTitle');
 // cardImg.classList.add('cardImg');
 // cardFirstParagraph.classList.add('cardFirstParagraph');
@@ -111,7 +121,7 @@ function dodgersInfo (obj) {
 // cardThirdParagraph.classList.add('cardSixthParagraph');
 
 console.log(card);
-return card;
+return post;
 
 };
 
